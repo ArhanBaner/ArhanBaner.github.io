@@ -58,13 +58,18 @@ div.content {
     float: none;
   }
 }
-nav ul, footer ul {
+div.container {
+  margin-left: 250px;
+  padding: 1px 16px;
+  height: 100px;
+}
+footer ul {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
     padding: 0px;
     list-style: none;
     font-weight: bold;
 }
-nav ul li, footer ul li {
+footer ul li {
     display: inline;
     margin-right: 20px;
 }
