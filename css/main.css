@@ -23,13 +23,13 @@ body {
 
 /* Active/current link */
 .sidebar a.active {
-  background-color: #4CAF50;
+  background-color: #22A39F;
   color: white;
 }
 
 /* Links on mouse-over */
 .sidebar a:hover:not(.active) {
-  background-color: #555;
+  background-color: #22A39F;
   color: white;
 }
 
