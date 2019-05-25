@@ -9,7 +9,7 @@ body {
   width: 150px;
   background-color: #222222;
   position: fixed;
-  height: 60%;
+  height: 48%;
   overflow: auto;
   text-align: center;
 }
@@ -21,6 +21,7 @@ body {
   padding: 16px;
   text-decoration: none;
   text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Active/current link */
