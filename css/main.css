@@ -7,10 +7,11 @@ body {
   margin: 0;
   padding: 0;
   width: 150px;
-  background-color: #f1f1f1;
+  background-color: #222222;
   position: fixed;
   height: 60%;
   overflow: auto;
+  text-align: center;
 }
 
 /* Sidebar links */
@@ -19,6 +20,7 @@ body {
   color: black;
   padding: 16px;
   text-decoration: none;
+  text-align: center;
 }
 
 /* Active/current link */
