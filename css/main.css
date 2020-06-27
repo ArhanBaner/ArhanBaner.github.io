@@ -2,103 +2,130 @@ body {
     margin: 60px auto;
     width: 70%;
 }
+
+
 /* The side navigation menu */
+
 .sidebar {
-  margin: 0;
-  padding: 0;
-  width: 150px;
-  background-color: #222222;
-  position: fixed;
-  height: 48%;
-  overflow: auto;
-  text-align: center;
+    margin: 0;
+    padding: 0;
+    width: 150px;
+    background-color: #222222;
+    position: fixed;
+    height: 48%;
+    overflow: auto;
+    text-align: center;
 }
+
 
 /* Sidebar links */
+
 .sidebar a {
-  display: block;
-  color: white;
-  padding: 16px;
-  text-decoration: none;
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
+    display: block;
+    color: white;
+    padding: 16px;
+    text-decoration: none;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
+
 
 /* Active/current link */
+
 .sidebar a.active {
-  background-color: #22A39F;
-  color: white;
+    background-color: #22A39F;
+    color: white;
 }
+
 
 /* Links on mouse-over */
+
 .sidebar a:hover:not(.active) {
-  background-color: #22A39F;
-  color: white;
+    background-color: #22A39F;
+    color: white;
 }
+
 
 /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+
 div.content {
-  margin-left: 200px;
-  padding: 1px 16px;
-  height: 1000px;
+    margin-left: 200px;
+    padding: 1px 16px;
+    height: 1000px;
 }
+
 
 /* On screens that are less than 700px wide, make the sidebar into a topbar */
+
 @media screen and (max-width: 700px) {
-  .sidebar {
-    width: 100%;
-    height: auto;
-    position: relative;
-  }
-  .sidebar a {float: left;}
-  div.content {margin-left: 0;}
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    .sidebar a {
+        float: left;
+    }
+    div.content {
+        margin-left: 0;
+    }
 }
 
+
 /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+
 @media screen and (max-width: 400px) {
-  .sidebar a {
-    text-align: center;
-    float: none;
-  }
+    .sidebar a {
+        text-align: center;
+        float: none;
+    }
 }
+
 div.container {
-  margin-left: 250px;
-  padding: 1px 16px;
-  height: 100px;
+    margin-left: 250px;
+    padding: 1px 16px;
+    height: 100px;
 }
+
 footer ul {
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    font-family: 'Helvetica', 'Arial', 'Sans-Serif';
     padding: 0px;
     list-style: none;
     font-weight: bold;
 }
+
 footer ul li {
     display: inline;
     margin-right: 200px;
 }
+
 a {
     text-decoration: none;
     color: #999;
 }
+
 a:hover {
     text-decoration: underline;
 }
+
 h1 {
     font-size: 3em;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    font-family: 'Helvetica', 'Arial', 'Sans-Serif';
 }
+
 p {
     font-size: 1.5em;
     line-height: 1.4em;
     color: #333;
 }
+
 footer {
     border-top: 1px solid #d5d5d5;
     font-size: .8em;
 }
 
-ul.posts { 
-    margin: 20px auto 40px; 
+ul.posts {
+    margin: 20px auto 40px;
     font-size: 1.5em;
 }
 
