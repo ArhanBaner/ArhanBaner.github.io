@@ -4,22 +4,39 @@
 <head>
 
     <meta charset="utf-8">
+    <link rel="stylesheet" href="css/main.css">
     <title>Arhan Banerjee</title>
 
 </head>
 
 <body>
 
-    <header>
+
+    <header id="home">
+
+
+        <video autoplay muted loop id="background_vid">
+            <source src="videos/home_background.mp4" type="video/mp4">
+        </video>
+
         <h1>
-            Arhan Banerjee
+            Hello, I'm Arhan Banerjee.
         </h1>
         <h3>
-            Computer Engineering Student
+
         </h3>
     </header>
 
-    <section class="about">
+    <nav>
+        <ul>
+            <li><a href='#home'>Home</a></li>
+            <li><a href='#about'>About</a></li>
+            <li><a href='#work_exp'>Work Experience</a></li>
+            <li><a href='#education'>Education</a></li>
+        </ul>
+    </nav>
+
+    <section id="about">
 
 
         <img id="profile_pic" src="images/profile_pic.JPG" alt="Profile picture of Arhan Banerjee" title="Arhan Banerjee" height="200">
@@ -37,7 +54,7 @@
 
     </section>
 
-    <section class="work_exp">
+    <section id="work_exp">
         <h1>Work Experience</h1>
 
         <section class="exp" id="ceridian">
@@ -96,7 +113,7 @@
 
     </section>
 
-    <section class="education">
+    <section id="education">
         <h1>Education</h1>
 
         <h3>University of Waterloo - Waterloo, ON, Canada</h3>
