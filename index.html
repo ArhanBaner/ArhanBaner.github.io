@@ -10,34 +10,44 @@
 </head>
 
 <body>
-
+    <script>
+        window.addEventListener("scroll", function() {
+            if (scrollY > (innerHeight - 10)) {
+                document.getElementsByClassName("nav")[0].classList.add("fixed");
+            } else {
+                document.getElementsByClassName("nav")[0].classList.remove("fixed");
+            }
+        });
+    </script>
 
     <header id="home">
 
 
         <video autoplay muted loop id="background_vid">
-            <source src="videos/home_background.mp4" type="video/mp4">
+            <source src="videos/circuits.mp4" type="video/mp4">
         </video>
 
-        <h1>
-            Hello, I'm Arhan Banerjee.
-        </h1>
+        <p>
+            Hello, I'm
+            <span>Arhan Banerjee</span>
+        </p>
         <h3>
-
+            Welcome to my website
         </h3>
     </header>
 
-    <nav>
+    <nav class="nav">
         <ul>
-            <li><a href='#home'>Home</a></li>
-            <li><a href='#about'>About</a></li>
-            <li><a href='#work_exp'>Work Experience</a></li>
-            <li><a href='#education'>Education</a></li>
+            <li><a href='#home'>HOME</a></li>
+            <li><a href='#about'>ABOUT</a></li>
+            <li><a href='#work_exp'>WORK EXPERIENCE</a></li>
+            <li><a href='#education'>EDUCATION</a></li>
         </ul>
     </nav>
 
     <section id="about">
 
+        <h1>ABOUT</h1>
 
         <img id="profile_pic" src="images/profile_pic.JPG" alt="Profile picture of Arhan Banerjee" title="Arhan Banerjee" height="200">
 
