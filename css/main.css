@@ -3,6 +3,15 @@ body {
     margin: 0px;
 }
 
+
+/*
+
+
+HOME section 
+
+
+*/
+
 #home video {
     height: 100vh;
     width: 100%;
@@ -55,6 +64,15 @@ body {
     margin: 0;
 }
 
+
+/*
+
+
+NAV section (JS in HTML)
+
+
+*/
+
 nav {
     position: absolute;
     bottom: -58px;
@@ -65,12 +83,18 @@ nav {
     line-height: 60px;
     display: flex;
     justify-content: left;
+    align-items: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+nav ul {
+    padding-left: 5%;
 }
 
 nav li {
     float: left;
     list-style-type: none;
-    margin: 0px 15px;
+    margin: 0px 20px;
 }
 
 .nav.fixed {
@@ -80,34 +104,22 @@ nav li {
     bottom: 0px;
 }
 
-
-/*
-nav li {
-    float: left;
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding-top: 3px;
-    padding-bottom: 3px;
-    overflow: hidden;
-    background-color: #040b1f;
-    padding-left: 8%;
-}
-
 nav li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 20px 20px;
     text-decoration: none;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: aliceblue;
 }
 
 nav li a:hover {
     color: #e31b6d;
 }
+
+
+/*
+
+
+ABOUT section 
+
+
 */
 
 #about {
@@ -115,10 +127,58 @@ nav li a:hover {
     width: 100%;
     height: 100vh;
     font-size: 20px;
-    background: #4e5e8b;
+    background: #151241;
 }
 
 #about h1 {
-    margin: 20px;
+    margin: 60px;
     text-align: center;
+    color: #e31b6d;
+}
+
+.row {
+    display: flex;
+    flex: auto auto;
+}
+
+.column {
+    flex: auto;
+    padding: 10px;
+}
+
+#sec {
+    display: flex;
+    justify-content: center;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+#profile_pic {
+    height: 350px;
+}
+
+.column {
+    text-align: center;
+    color: rgb(190, 213, 233);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    overflow: hidden;
+}
+
+.column h2 {
+    line-height: 10px;
+}
+
+.column h3 {
+    color: rgb(122, 150, 175);
+}
+
+.column a {
+    color: #e31b6d;
+}
+
+.row:after {
+    /* Clear floats after the columns */
+    content: "";
+    display: table;
+    clear: both;
 }
