@@ -85,6 +85,7 @@ nav {
     justify-content: left;
     align-items: center;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-bottom: 3px solid #04c2c9;
 }
 
 nav ul {
@@ -94,7 +95,7 @@ nav ul {
 nav li {
     float: left;
     list-style-type: none;
-    margin: 0px 20px;
+    margin: 0px 15px;
 }
 
 .nav.fixed {
@@ -124,6 +125,7 @@ ABOUT section
 
 #about {
     padding-top: 60px;
+    padding-bottom: 50px;
     width: 100%;
     height: 100%;
     font-size: 20px;
@@ -194,10 +196,11 @@ SKILLS section
 
 #skills {
     padding-top: 30px;
+    padding-bottom: 50px;
     width: 100%;
     height: 100%;
     font-size: 20px;
-    background: #251f6e;
+    background: #19154b;
 }
 
 #skills h1 {
@@ -231,16 +234,17 @@ SKILLS section
 
 /*
 
+Work Experience Section
 
 */
 
 #work_exp {
     padding-top: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 50px;
     width: 100%;
     height: 100%;
     font-size: 20px;
-    background: grey;
+    background: #151241;
 }
 
 #work_exp h1 {
@@ -260,7 +264,7 @@ SKILLS section
     margin-bottom: 4%;
     margin-left: 8%;
     margin-right: 8%;
-    background: #f0ebed;
+    background: #cac3c6;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
@@ -302,5 +306,80 @@ hr {
 #date_footer {
     margin: 0;
     height: 40px;
-    background-color: greenyellow;
+    background-color: grey;
+}
+
+
+/*
+
+Education Section
+
+*/
+
+#education {
+    padding-top: 60px;
+    padding-bottom: 140px;
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    background: #19154b;
+}
+
+#education a {
+    text-decoration: none;
+}
+
+#education h1 {
+    text-align: center;
+    color: #e31b6d;
+}
+
+.triangle-down {
+    width: fit-content;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-top: 50px solid #555;
+}
+
+svg {
+    background-color: #252934;
+}
+
+
+/*
+
+
+
+*/
+
+#contact {
+    margin: 0;
+    margin-top: -23px;
+    padding-top: 80px;
+    padding-bottom: 30px;
+    width: 100%;
+    height: 100%;
+    background-color: #252934;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+#contact h1 {
+    text-align: center;
+    color: #e31b6d;
+}
+
+#contact h3 {
+    text-align: center;
+    color: #04c2c9;
+}
+
+
+/*
+
+
+*/
+
+footer {
+    background-color: #1b242f;
 }
