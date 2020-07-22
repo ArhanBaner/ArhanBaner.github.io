@@ -367,17 +367,21 @@ svg {
 #contact h1 {
     text-align: center;
     color: #e31b6d;
+    font-size: 40px;
 }
 
 #contact h3 {
     text-align: center;
     color: #04c2c9;
+    font-size: 15px;
 }
 
 #contact_form {
+    margin-top: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 50px;
 }
 
 form {
@@ -402,6 +406,14 @@ textarea {
 
 textarea {
     resize: none;
+}
+
+#submit {
+    width: 100px;
+    text-align: center;
+    border: 2px solid #04c2c9;
+    margin-top: 6px;
+    cursor: pointer;
 }
 
 
