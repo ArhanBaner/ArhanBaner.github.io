@@ -1,32 +1,229 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Arhan Banerjee, Computer Engineering Student</title>
-		<!-- link to main stylesheet -->
-		<link rel="stylesheet" type="text/css" href="/css/main.css">
-	</head>
-	<body>
-		<nav>
-    		<div class ="sidebar">
-        		<a class = "active" href="#home">Home</a>
-				<a href="#Profile">Profile</a>
-	        	<a href="#Experiences">Experiences</a>
-        		<a href="#Abilities">Abilities</a>
-        		<a href="#Projects">Projects</a>
-				<a href="#Contact">Contact</a>
-    		
-		</nav>
-		<div class="container">
-    		<div class="blurb">
-        		<h1>Arhan Banerjee</h1>
-				<p>I'm currently studying Computer Engineering at the University of Waterloo <em></em><a href="/about">Read more about my life...</a></p>
-    		</div><!-- /.blurb -->
-		</div><!-- /.container -->
-		<footer>
-    		<ul>
-        		<li><a href="mailto:a39baner@uwaterloo.ca">email</a></li>
-        		<li><a href="https://github.com/arhanbaner"></a></li>
-			</ul>
-		</footer>
-	</body>
+
+<head>
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Arhan Banerjee</title>
+
+</head>
+
+<body>
+    <script>
+        window.addEventListener("scroll", function() {
+            if (scrollY > (innerHeight - 10)) {
+                document.getElementsByClassName("nav")[0].classList.add("fixed");
+            } else {
+                document.getElementsByClassName("nav")[0].classList.remove("fixed");
+            }
+        });
+    </script>
+
+    <header id="home">
+
+
+        <video autoplay muted loop id="background_vid">
+            <source src="videos/circuits.mp4" type="video/mp4">
+        </video>
+
+        <p>
+            Hello, I'm
+            <span>Arhan Banerjee</span>
+        </p>
+        <h3>
+            Welcome to my website
+        </h3>
+    </header>
+
+    <nav class="nav">
+        <ul>
+            <li><a href='#home'>HOME</a></li>
+            <li><a href='#about'>ABOUT</a></li>
+            <li><a href="#skills">SKILLS</a></li>
+            <li><a href='#work_exp'>WORK EXPERIENCE</a></li>
+            <li><a href='#education'>EDUCATION</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
+    </nav>
+
+    <section id="about">
+
+        <h1>ABOUT ME</h1>
+
+        <div class="row">
+            <div class="column">
+                <h2>Arhan Banerjee</h2>
+                <h3>Computer Engineering Student</h3>
+                <p> Hello everyone! I am a second year Computer Engineering student at <a href="https://uwaterloo.ca/">University of 
+                    Waterloo</a>. You can usually find me catching up on the latest movies, attending hackathons such as
+                    <a href="https://hackthenorth.com/">Hack the North</a>, or hanging out with my friends!</p>
+                <p>
+                    I am an enterprising programmer with a flair for creating elegant solutions while optimizing resources. With a strong foundation and working knowledge in C++, Java, Python, and Javascript, I am looking forward to using my programming skills to further
+                    enhance efficiency and data management.
+                </p>
+            </div>
+
+
+            <div class="column" id="sec">
+                <img id="profile_pic" src="images/profile_pic.JPG" alt="Profile picture of Arhan Banerjee" title="Arhan Banerjee">
+            </div>
+        </div>
+
+    </section>
+
+    <section id="skills">
+
+
+        <h1>SKILLS & FRAMEWORKS</h1>
+
+        <div class="row">
+            <div class="column" id="text">
+                <p>
+                    The main area of my expertise is back end mobile development (iOS and Android).
+                    <br><br> C++, Java, and Python are the building blocks on which my projects are based on. I utilize multiple frameworks such as Jenkins and Git to streamline my process and ensure stability.
+                    <br> <br>I have also working knowledge of HTML/CSS building small scale web apps with features and animations.
+                    <br> <br>Visit my <a href="https://www.linkedin.com/in/arhanbaner/">LinkedIn</a> profile for more details or just contact me.
+                </p>
+            </div>
+
+            <div class="column">
+                <img id="wordcloud" src="images/wordcloud_bg.png" alt="Skills wordcloud">
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="work_exp">
+        <h1>Work Experience</h1>
+
+        <section class="exp" id="ceridian">
+
+
+            <div id="header">
+                <h3 class="position"><img id="logo" src="images/ceridian_logo.png" alt="Ceridian" title="Ceridian">Mobile Engineering Intern | Ceridian</h3>
+            </div>
+            <hr>
+
+            <ul>
+                <li>Architected and developed a new two-factor authentication module using <span>Java</span> and <span>JMeter</span> in Android Studio which reduced load times of end users by 5 seconds per login
+                </li>
+                <li>
+                    Utilized <span>Junit TestNG</span> and <span>Jenkins</span> framework to create automated regression tests and improve overall coverage by 25% that monitor the performance of crashes reported
+                </li>
+                <li>
+                    Refactored TimeSheet Activities for compatibility with Android 9 landscape calendar view using <span>Jira API</span> and internal <span>SQL</span> databases to ensure stability with multiple project versions
+                </li>
+                <li>
+                    Leveraged <span>Atlassian</span> Confluence to more accurately gather metrics on development pipelines and bottlenecks
+                </li>
+            </ul>
+            <div id="date_footer">
+                <h5 class="date">Sept 2019 - Dec 2019 | Toronto, ON</h5>
+            </div>
+        </section>
+
+        <section class="exp" id="roots">
+            <div id="header">
+                <h3 class="position"><img id="logo" src="images/roots_logo.png" alt="Roots" title="Roots">Software Business Analyst | Roots</h3>
+            </div>
+            <hr>
+            <ul>
+                <li>
+                    Developed and deployed a completely customized internal application utilizing <span>PowerApps</span> for customers to use in editing leather products in store.
+                </li>
+                <li>
+                    Automated multiple business workflows using <span>MS Flow</span> to map responses received on the website to internal forms for further analysis
+                </li>
+                <li>
+                    Worked closely with Product and QA teams in an <span>Agile</span> workflow to plan and execute tests across mobile and server-client databases to ensure it meets the specified requirements
+                </li>
+            </ul>
+            <div id="date_footer">
+                <h5 class="date">Jan 2019 - Apr 2019 | Toronto, ON</h5>
+            </div>
+        </section>
+
+        <section class="exp" id="waterloop">
+            <div id="header">
+                <h3 class="position"><img id="logo" src="images/waterloop_logo.png" alt="Waterloop" title="Waterloop">Student Design Team | Waterloop</h3>
+            </div>
+            <hr>
+            <ul>
+                <li>
+                    Joined a student design team, which is responsible for competing annually at the <span>SpaceX Hyperloop Challenge</span>
+                </li>
+                <li>
+                    Collaborated with team members to create a <span>C++</span> program using <span>TCP/IP</span> to connect a Raspberry Pi with a statically assigned IP address that allows both systems to communicate with each other
+                </li>
+                <li>
+                    Converted data obtained from CAN packets to JSON using <span>RapidJSON</span> for seamless client-side data processing
+                </li>
+            </ul>
+            <div id="date_footer">
+                <h5 class="date">Sept 2018 - Jan 2019 | Waterloo, ON</h5>
+            </div>
+        </section>
+
+
+
+    </section>
+
+    <section id="education">
+        <h1>Education</h1>
+
+        <div class="row">
+            <div class="column">
+
+                <h3>University of Waterloo - Waterloo, ON, Canada</h3>
+
+
+                <p>Degree: BASc - Bachelor of Applied Science</p>
+                <p>Program: <a href="https://uwaterloo.ca/electrical-computer-engineering/">Computer Engineering, Co-op</a></p>
+                <p>Expected Graduation Date: May 2023</p>
+            </div>
+
+            <div class="column" id="sec">
+                <img id="uni_logo" src="images/uni_logo.png" alt="Engineering at University of Waterloo" title="Engineering at University of Waterloo" height="200">
+            </div>
+
+        </div>
+
+    </section>
+    <svg preserveAspectRatio="none" viewBox="0 0 100 102" height="75" width="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" class="svgcolor-light">
+        <path d="M0 0 L50 100 L100 0 Z" fill=#19154b stroke=#19154b></path>
+      </svg>
+
+    <section id="contact">
+        <h1 id="contact_hook">CONTACT</h1>
+
+
+
+        <h3>Want to chat or learn more about me?</h3>
+
+        <div id="contact_form">
+            <form id="contact-form" action="mailer.php" method="POST">
+                <input placeholder="Name" type="text" name="name" required="">
+                <input placeholder="Enter email" type="email" name="email" required="">
+                <textarea rows="5" cols="50" placeholder="Your Message" type="text" name="message"></textarea>
+                <div id="success">
+                    <div>
+                        Your message was sent successfully. Thanks!<span id="close" class="mdi mdi-close"></span>
+                    </div>
+                </div>
+                <input class="button" type="submit" id="submit" value="SUBMIT">
+            </form>
+
+        </div>
+
+    </section>
+
+    <footer>
+        Arhan Banerjee ©2020
+    </footer>
+
+
+</body>
+
 </html>

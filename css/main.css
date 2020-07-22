@@ -1,107 +1,415 @@
+html,
 body {
-    margin: 60px auto;
-    width: 70%;
-}
-/* The side navigation menu */
-.sidebar {
-  margin: 0;
-  padding: 0;
-  width: 150px;
-  background-color: #222222;
-  position: fixed;
-  height: 48%;
-  overflow: auto;
-  text-align: center;
+    margin: 0px;
 }
 
-/* Sidebar links */
-.sidebar a {
-  display: block;
-  color: white;
-  padding: 16px;
-  text-decoration: none;
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-}
 
-/* Active/current link */
-.sidebar a.active {
-  background-color: #22A39F;
-  color: white;
-}
+/*
 
-/* Links on mouse-over */
-.sidebar a:hover:not(.active) {
-  background-color: #22A39F;
-  color: white;
-}
 
-/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
-div.content {
-  margin-left: 200px;
-  padding: 1px 16px;
-  height: 1000px;
-}
+HOME section 
 
-/* On screens that are less than 700px wide, make the sidebar into a topbar */
-@media screen and (max-width: 700px) {
-  .sidebar {
+
+*/
+
+#home video {
+    height: 100vh;
     width: 100%;
-    height: auto;
+    background-position: absolute;
+    z-index: 10;
+    object-fit: cover;
+    margin-bottom: -27px;
+}
+
+#home {
     position: relative;
-  }
-  .sidebar a {float: left;}
-  div.content {margin-left: 0;}
+    margin-bottom: 0px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
-@media screen and (max-width: 400px) {
-  .sidebar a {
-    text-align: center;
-    float: none;
-  }
+#home p {
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    z-index: 20;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: aliceblue;
+    margin: auto;
+    /* This is for centering the text 
+    in the middle of the section*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 42px;
 }
-div.container {
-  margin-left: 250px;
-  padding: 1px 16px;
-  height: 100px;
+
+#home span {
+    padding: 10px;
+    color: #e31b6d;
 }
-footer ul {
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    padding: 0px;
-    list-style: none;
-    font-weight: bold;
+
+#home h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    top: -250px;
+    left: 0;
+    z-index: 30;
+    position: relative;
+    color: aliceblue;
+    margin: 0;
 }
-footer ul li {
-    display: inline;
-    margin-right: 200px;
+
+
+/*
+
+
+NAV section (JS in HTML)
+
+
+*/
+
+nav {
+    position: absolute;
+    bottom: -58px;
+    left: 0px;
+    width: 100%;
+    height: 60px;
+    background-color: #040b1f;
+    line-height: 60px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-bottom: 3px solid #04c2c9;
 }
-a {
+
+nav ul {
+    padding-left: 5%;
+}
+
+nav li {
+    float: left;
+    list-style-type: none;
+    margin: 0px 15px;
+}
+
+.nav.fixed {
+    position: fixed !important;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+}
+
+nav li a {
     text-decoration: none;
-    color: #999;
+    color: aliceblue;
 }
-a:hover {
-    text-decoration: underline;
+
+nav li a:hover {
+    color: #e31b6d;
 }
-h1 {
-    font-size: 3em;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+
+
+/*
+
+
+ABOUT section 
+
+
+*/
+
+#about {
+    padding-top: 60px;
+    padding-bottom: 50px;
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    background: #151241;
 }
-p {
-    font-size: 1.5em;
-    line-height: 1.4em;
-    color: #333;
+
+#about h1 {
+    margin: 60px;
+    text-align: center;
+    color: #e31b6d;
 }
+
+.row {
+    display: flex;
+    flex: auto auto;
+}
+
+.column {
+    flex: auto;
+    padding: 10px;
+}
+
+#sec {
+    display: flex;
+    justify-content: center;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+#profile_pic {
+    height: 350px;
+}
+
+.column {
+    text-align: center;
+    color: rgb(190, 213, 233);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    overflow: hidden;
+}
+
+.column h2 {
+    line-height: 10px;
+}
+
+.column h3 {
+    color: rgb(122, 150, 175);
+}
+
+.column a {
+    color: #e31b6d;
+}
+
+.row:after {
+    /* Clear floats after the columns */
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/*
+
+
+SKILLS section
+
+
+*/
+
+#skills {
+    padding-top: 30px;
+    padding-bottom: 50px;
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    background: #19154b;
+}
+
+#skills h1 {
+    margin-top: 50px;
+    text-align: center;
+    color: #e31b6d;
+}
+
+#skills .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#skills .column {
+    flex: 1 1 auto;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+#skills img {
+    max-width: 90%;
+}
+
+#text {
+    max-width: 50%;
+}
+
+
+/*
+
+Work Experience Section
+
+*/
+
+#work_exp {
+    padding-top: 30px;
+    padding-bottom: 50px;
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    background: #151241;
+}
+
+#work_exp h1 {
+    margin-top: 50px;
+    text-align: center;
+    color: #e31b6d;
+}
+
+#work_exp li {
+    margin-bottom: 20px;
+}
+
+#ceridian,
+#roots,
+#waterloop {
+    margin-top: 4%;
+    margin-bottom: 4%;
+    margin-left: 8%;
+    margin-right: 8%;
+    background: #cac3c6;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+#logo {
+    display: flex;
+    height: 60px;
+    align-items: center;
+    margin: 10px;
+    margin-top: 25px;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+#header h3 {
+    display: flex;
+    align-items: center;
+}
+
+h3.position {
+    margin-bottom: 0;
+}
+
+hr {
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.date {
+    margin-left: 20px;
+    padding-top: 8px;
+    padding-bottom: 20px;
+}
+
+#date_footer {
+    margin: 0;
+    height: 40px;
+    background-color: grey;
+}
+
+
+/*
+
+Education Section
+
+*/
+
+#education {
+    padding-top: 60px;
+    padding-bottom: 140px;
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    background: #19154b;
+}
+
+#education a {
+    text-decoration: none;
+}
+
+#education h1 {
+    text-align: center;
+    color: #e31b6d;
+}
+
+.triangle-down {
+    width: fit-content;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-top: 50px solid #555;
+}
+
+svg {
+    background-color: #252934;
+}
+
+
+/*
+
+
+
+*/
+
+#contact {
+    margin: 0;
+    margin-top: -23px;
+    padding-top: 80px;
+    padding-bottom: 30px;
+    width: 100%;
+    height: 100%;
+    background-color: #252934;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+#contact h1 {
+    text-align: center;
+    color: #e31b6d;
+}
+
+#contact h3 {
+    text-align: center;
+    color: #04c2c9;
+}
+
+#contact_form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    width: 400px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+input,
+textarea {
+    text-align: left;
+    background-color: #1e242c;
+    border: 0;
+    box-sizing: border-box;
+    color: #fff;
+    display: block;
+    margin-bottom: 3px;
+    outline: none;
+    padding: 10px;
+    width: 100%;
+}
+
+textarea {
+    resize: none;
+}
+
+
+/*
+
+
+*/
+
 footer {
-    border-top: 1px solid #d5d5d5;
-    font-size: .8em;
-}
-
-ul.posts { 
-    margin: 20px auto 40px; 
-    font-size: 1.5em;
-}
-
-ul.posts li {
-    list-style: none;
+    background-color: #1b242f;
 }
