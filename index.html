@@ -203,16 +203,14 @@
         <h3>Want to chat or learn more about me?</h3>
 
         <div id="contact_form">
-            <form id="contact-form" action="mailer.php" method="POST">
+            <form id="contact-form" action="https://formspree.io/banerjeeruku@yahoo.com" method="POST">
                 <input placeholder="Name" type="text" name="name" required="">
-                <input placeholder="Enter email" type="email" name="email" required="">
+                <input placeholder="Enter email" type="email" name="_replyto" required="">
                 <textarea rows="5" cols="50" placeholder="Your Message" type="text" name="message"></textarea>
-                <div id="success">
-                    <div>
-                        Your message was sent successfully. Thanks!<span id="close" class="mdi mdi-close"></span>
-                    </div>
-                </div>
+
                 <input class="button" type="submit" id="submit" value="SUBMIT">
+                <input type="hidden" name="_subject" value="Form Submission" />
+                <input type="hidden" name="_next" value="thanks.html" />
             </form>
 
         </div>
