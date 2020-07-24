@@ -6,7 +6,10 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Arhan Banerjee</title>
+
+
 
 </head>
 
@@ -20,6 +23,8 @@
             }
         });
     </script>
+
+
 
     <header id="home">
 
@@ -45,6 +50,7 @@
             <li><a href='#work_exp'>WORK EXPERIENCE</a></li>
             <li><a href='#education'>EDUCATION</a></li>
             <li><a href="#contact">CONTACT</a></li>
+
         </ul>
     </nav>
 
@@ -214,6 +220,60 @@
             </form>
 
         </div>
+
+        <button onclick="topFunction()" id="myBtn" title="Go to top"><span class="material-icons">
+            double_arrow
+            </span></button>
+        <script>
+            //Get the button:
+            mybutton = document.getElementById("myBtn");
+
+            // Function is called as soon as user starts scrolling
+            window.onscroll = function() {
+                scrollFunction()
+            };
+
+            function scrollFunction() {
+
+
+                if (document.body.scrollTop > 680 || document.documentElement.scrollTop > 680) {
+                    mybutton.style.display = "block";
+
+                    // If fade out is added, remove it and add fade in
+
+                    if (document.getElementById("myBtn").classList.contains('elementToFadeOut')) {
+                        document.getElementById("myBtn").classList.remove('elementToFadeOut');
+                    }
+
+                    if (!document.getElementById("myBtn").classList.contains('elementToFadeIn')) {
+                        document.getElementById("myBtn").classList.add('elementToFadeIn');
+                    }
+                } else {
+
+                    // If no fade in or fade out classes have been added, do nothing
+                    if (!document.getElementById("myBtn").classList.contains('elementToFadeOut') && !document.getElementById("myBtn").classList.contains('elementToFadeIn')) {
+
+                        // If fade in is added, remove it and add fade out
+                    } else if (document.getElementById("myBtn").classList.contains('elementToFadeIn')) {
+                        document.getElementById("myBtn").classList.remove('elementToFadeIn');
+                        document.getElementById("myBtn").classList.add('elementToFadeOut');
+
+                        // If fade out isn't added, add it
+                    } else if (!document.getElementById("myBtn").classList.contains('elementToFadeOut')) {
+                        document.getElementById("myBtn").classList.add('elementToFadeOut');
+                    }
+
+
+                    mybutton.style.display = "block";
+                }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0; // For Safari
+                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            }
+        </script>
 
     </section>
 

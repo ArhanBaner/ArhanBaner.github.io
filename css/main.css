@@ -1,6 +1,7 @@
 html,
 body {
     margin: 0px;
+    scroll-behavior: smooth;
 }
 
 
@@ -50,6 +51,8 @@ HOME section
     color: #e31b6d;
 }
 
+
+/*
 #home h3 {
     display: flex;
     justify-content: center;
@@ -63,6 +66,7 @@ HOME section
     color: aliceblue;
     margin: 0;
 }
+*/
 
 
 /*
@@ -75,7 +79,7 @@ NAV section (JS in HTML)
 
 nav {
     position: absolute;
-    bottom: -58px;
+    bottom: -62px;
     left: 0px;
     width: 100%;
     height: 60px;
@@ -89,7 +93,7 @@ nav {
 }
 
 nav ul {
-    padding-left: 5%;
+    padding-left: 2%;
 }
 
 nav li {
@@ -112,6 +116,10 @@ nav li a {
 
 nav li a:hover {
     color: #e31b6d;
+}
+
+.active {
+    color: #e31b6d !important;
 }
 
 
@@ -349,7 +357,7 @@ svg {
 
 /*
 
-
+Contact section
 
 */
 
@@ -419,6 +427,7 @@ textarea {
 
 /*
 
+Footer section
 
 */
 
@@ -471,4 +480,73 @@ footer {
 footer p {
     color: #8f9aa7;
     opacity: 0.6;
+}
+
+
+/*
+
+Go To Top button 
+
+*/
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #e31b6d;
+    cursor: pointer;
+    padding-top: 5px;
+    transition: ease-in;
+    opacity: 0;
+}
+
+#myBtn:hover {
+    background-color: #555;
+}
+
+#myBtn span {
+    transform: rotate(-90deg);
+}
+
+.material-icons {
+    font-size: 40px !important;
+}
+
+.elementToFadeIn {
+    opacity: 1 !important;
+    animation: fade 2s linear;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.elementToFadeOut {
+    opacity: 0 !important;
+    animation: fadeout 1s linear;
+    cursor: default !important;
+}
+
+@keyframes fadeout {
+    0% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
 }
