@@ -21,8 +21,27 @@
             } else {
                 document.getElementsByClassName("nav")[0].classList.remove("fixed");
             }
+
+            if (scrollY > (innerHeight - 250)) {
+                document.getElementsByClassName("about_class")[0].classList.remove("hidden")
+                document.getElementsByClassName("about_class")[0].classList.add("slide-in-element")
+
+                document.getElementsByClassName("hori_line")[0].classList.remove("hidden")
+                document.getElementsByClassName("hori_line")[0].classList.add("slide-in-element")
+
+            }
+
+
+
+            if (scrollY > (innerHeight - 150)) {
+                document.getElementsByClassName("row")[0].classList.remove("hidden")
+                document.getElementsByClassName("row")[0].classList.add("slide-in-element")
+            }
+
+
         });
     </script>
+
 
 
 
@@ -33,13 +52,19 @@
             <source src="videos/circuits.mp4" type="video/mp4">
         </video>
 
-        <p>
+        <p id="intro">
             Hello, I'm
             <span>Arhan Banerjee</span>
+
+
         </p>
-        <h3>
-            Welcome to my website
-        </h3>
+        <p id="button_p">
+            <a href='#about'><button id="headerBtn" onclick= type="button"><div>View my work</div><span class="material-icons">
+                keyboard_arrow_down
+                </span></button></a>
+        </p>
+
+
     </header>
 
     <nav class="nav">
@@ -56,9 +81,10 @@
 
     <section id="about">
 
-        <h1>ABOUT ME</h1>
+        <h1 class="about_class hidden">ABOUT</h1>
+        <hr class="hori_line hidden">
 
-        <div class="row">
+        <div class="row hidden">
             <div class="column">
                 <h2>Arhan Banerjee</h2>
                 <h3>Computer Engineering Student</h3>
