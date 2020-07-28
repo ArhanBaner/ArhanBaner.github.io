@@ -2,6 +2,7 @@ html,
 body {
     margin: 0px;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 
@@ -153,12 +154,27 @@ HOME section
     }
 }
 
+@keyframes slide-in-right {
+    0% {
+        transform: translateX(250px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
 .fade-in-element {
     animation: fade-in 1.4s;
 }
 
 .slide-in-element {
     animation: slide-in 1s;
+}
+
+.slide-in-right-element {
+    animation: slide-in-right 1s;
 }
 
 
@@ -252,7 +268,7 @@ ABOUT section
 
 #about {
     padding-top: 120px;
-    padding-bottom: 50px;
+    padding-bottom: 100px;
     width: 100%;
     height: 100%;
     font-size: 20px;
@@ -267,10 +283,11 @@ ABOUT section
     font-size: 30pt;
 }
 
-#about hr {
+.hori_line {
     width: 7%;
     margin-right: auto;
     margin-left: auto;
+    margin-bottom: 40px;
     background-color: #e31b6d;
     height: 4px;
     border: none;
@@ -335,7 +352,7 @@ SKILLS section
 
 #skills {
     padding-top: 30px;
-    padding-bottom: 50px;
+    padding-bottom: 80px;
     width: 100%;
     height: 100%;
     font-size: 20px;
@@ -343,9 +360,10 @@ SKILLS section
 }
 
 #skills h1 {
-    margin-top: 50px;
+    margin-top: 60px;
     text-align: center;
     color: #e31b6d;
+    font-size: 30pt;
 }
 
 #skills .row {
@@ -379,7 +397,7 @@ Work Experience Section
 
 #work_exp {
     padding-top: 30px;
-    padding-bottom: 50px;
+    padding-bottom: 80px;
     width: 100%;
     height: 100%;
     font-size: 20px;
@@ -387,12 +405,26 @@ Work Experience Section
 }
 
 #work_exp h1 {
-    margin-top: 50px;
+    margin-top: 60px;
     text-align: center;
     color: #e31b6d;
+    font-size: 30pt;
+}
+
+#work_exp #work_line {
+    width: 7%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 40px;
+    background-color: #e31b6d;
+    height: 4px;
+    border: none;
+    outline: none;
 }
 
 #work_exp li {
+    padding-left: 5px;
+    padding-right: 5px;
     margin-bottom: 20px;
 }
 
@@ -431,7 +463,7 @@ h3.position {
     margin-bottom: 0;
 }
 
-hr {
+#work_exp hr {
     margin-left: 2%;
     margin-right: 2%;
 }
@@ -471,6 +503,7 @@ Education Section
 #education h1 {
     text-align: center;
     color: #e31b6d;
+    font-size: 30pt;
 }
 
 .triangle-down {
