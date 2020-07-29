@@ -4,6 +4,7 @@
 <head>
 
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -15,7 +16,18 @@
 
 <body>
     <script>
-        // Nav Bar
+        window.onload = function() {
+                if (window.innerWidth < 900) {
+                    document.querySelectorAll('.row').forEach(x => x.classList.add('stacked_view'));
+                }
+                if (window.innerWidth < 550) {
+                    document.querySelectorAll('#intro').forEach(x => x.classList.add('reduced_mobile_size'));
+                }
+                if (window.innerHeight > 1000) {
+                    document.querySelectorAll('#button_p').forEach(x => x.classList.add('button_ipad_mobile_view'));
+                }
+            }
+            // Nav Bar
         window.addEventListener("scroll", function() {
             if (scrollY > (innerHeight - 10)) {
                 document.getElementsByClassName("nav")[0].classList.add("fixed");
@@ -136,6 +148,7 @@
         <video autoplay muted loop id="background_vid">
             <source src="videos/circuits.mp4" type="video/mp4">
         </video>
+
 
         <p id="intro">
             Hello, I'm

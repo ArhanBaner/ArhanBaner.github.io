@@ -47,6 +47,10 @@ HOME section
     font-size: 42px;
 }
 
+.reduced_mobile_size {
+    font-size: 25px !important;
+}
+
 #intro,
 #button_p,
 .row {
@@ -69,7 +73,7 @@ HOME section
 
 #home span {
     padding: 10px;
-    padding-left: 12px;
+    padding-left: 8px;
     color: #e31b6d;
 }
 
@@ -126,7 +130,11 @@ HOME section
 
 #button_p {
     height: 80% !important;
-    padding-top: 135px;
+    padding-top: 150px;
+}
+
+.button_ipad_mobile_view {
+    padding-top: 200px !important;
 }
 
 .hidden {
@@ -297,6 +305,10 @@ ABOUT section
 .row {
     display: flex;
     flex: auto auto;
+}
+
+.stacked_view {
+    flex-wrap: wrap-reverse !important;
 }
 
 .column {
