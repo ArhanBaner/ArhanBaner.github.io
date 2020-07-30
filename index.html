@@ -18,13 +18,13 @@
     <script>
         window.onload = function() {
                 if (window.innerWidth < 900) {
-                    document.querySelectorAll('.row').forEach(x => x.classList.add('stacked_view'));
+                    //document.querySelectorAll('.row').forEach(x => x.classList.add('stacked_view'));
                 }
                 if (window.innerWidth < 550) {
-                    document.querySelectorAll('#intro').forEach(x => x.classList.add('reduced_mobile_size'));
+                    //document.querySelectorAll('#intro').forEach(x => x.classList.add('reduced_mobile_size'));
                 }
                 if (window.innerHeight > 1000) {
-                    document.querySelectorAll('#button_p').forEach(x => x.classList.add('button_ipad_mobile_view'));
+                    //document.querySelectorAll('#button_p').forEach(x => x.classList.add('button_ipad_mobile_view'));
                 }
             }
             // Nav Bar
@@ -166,16 +166,41 @@
     </header>
 
     <nav class="nav">
-        <ul>
+        <script>
+            function openNav() {
+
+                document.getElementById("mySidenav").style.width = "250px";
+            }
+
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+            }
+        </script>
+
+        <ul id="myTopnav" class="topnav">
+            <a href="javascript:void(0);" class="icon" onclick="openNav()">
+                <i class="fa fa-bars"></i>
+            </a>
             <li><a href='#home'>HOME</a></li>
             <li><a href='#about'>ABOUT</a></li>
             <li><a href="#skills">SKILLS</a></li>
             <li><a href='#work_exp'>WORK EXPERIENCE</a></li>
             <li><a href='#education'>EDUCATION</a></li>
             <li><a href="#contact">CONTACT</a></li>
+            <li class="topnav_resume"><a class="topnav_resume" href="docs/Updated Resume 2020.pdf" download="Arhan Banerjee Resume 2020" target="_blank">VIEW RESUME</a></li>
 
         </ul>
     </nav>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href='#home' onclick="closeNav()">HOME</a></li>
+        <a href='#about' onclick="closeNav()">ABOUT</a>
+        <a href="#skills" onclick="closeNav()">SKILLS</a>
+        <a href='#work_exp' onclick="closeNav()">WORK EXPERIENCE</a>
+        <a href='#education' onclick="closeNav()">EDUCATION</a>
+        <a href="#contact" onclick="closeNav()">CONTACT</a>
+        <a href="docs/Updated Resume 2020.pdf" download="Arhan Banerjee Resume 2020" class="resume" onclick="closeNav()" target="_blank">View Resume</a>
+    </div>
 
     <section id="about">
 
