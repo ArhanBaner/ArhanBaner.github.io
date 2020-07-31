@@ -52,6 +52,9 @@ HOME section
     .row {
         flex-wrap: wrap-reverse !important;
     }
+    #button_p {
+        margin-bottom: 10%;
+    }
 }
 
 @media screen and (max-width: 550px) {
