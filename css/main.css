@@ -60,7 +60,9 @@ HOME section
 @media screen and (max-width: 450px) {
     #button_p {
         display: none;
-        bottom: -92px;
+    }
+    .nav {
+        bottom: -92px !important;
     }
 }
 
