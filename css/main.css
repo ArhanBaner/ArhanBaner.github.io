@@ -57,6 +57,12 @@ HOME section
     }
 }
 
+@media screen and (max-width: 450px) {
+    #button_p {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 550px) {
     #intro {
         font-size: 23px !important;
