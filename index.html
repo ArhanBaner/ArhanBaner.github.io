@@ -4,21 +4,143 @@
 <head>
 
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Arhan Banerjee</title>
+
+
 
 </head>
 
 <body>
     <script>
+        window.onload = function() {
+                if (window.innerWidth < 900) {
+                    //document.querySelectorAll('.row').forEach(x => x.classList.add('stacked_view'));
+                }
+                if (window.innerWidth < 550) {
+                    //document.querySelectorAll('#intro').forEach(x => x.classList.add('reduced_mobile_size'));
+                }
+                if (window.innerHeight > 1000) {
+                    //document.querySelectorAll('#button_p').forEach(x => x.classList.add('button_ipad_mobile_view'));
+                }
+            }
+            // Nav Bar
         window.addEventListener("scroll", function() {
             if (scrollY > (innerHeight - 10)) {
                 document.getElementsByClassName("nav")[0].classList.add("fixed");
             } else {
                 document.getElementsByClassName("nav")[0].classList.remove("fixed");
             }
+
+            //About Section
+
+            if (scrollY > (innerHeight - 250)) {
+                document.getElementsByClassName("about_class")[0].classList.remove("hidden")
+                document.getElementsByClassName("about_class")[0].classList.add("slide-in-element")
+
+                document.getElementsByClassName("hori_line")[0].classList.remove("hidden")
+                document.getElementsByClassName("hori_line")[0].classList.add("slide-in-right-element")
+
+            }
+
+            if (scrollY > (innerHeight - 100)) {
+                document.getElementsByClassName("slide-in-left")[0].classList.remove("hidden")
+                document.getElementsByClassName("slide-in-left")[0].classList.add("slide-in-element")
+
+                document.getElementsByClassName("slide-in-right")[0].classList.remove("hidden")
+                document.getElementsByClassName("slide-in-right")[0].classList.add("slide-in-right-element")
+            }
+
+            // Skills section
+
+            if (scrollY > (innerHeight + 450)) {
+                document.getElementsByClassName("skills_class")[0].classList.remove("hidden")
+                document.getElementsByClassName("skills_class")[0].classList.add("slide-in-right-element")
+
+                document.getElementsByClassName("skills_line")[0].classList.remove("hidden")
+                document.getElementsByClassName("skills_line")[0].classList.add("slide-in-element")
+
+            }
+
+            if (scrollY > (innerHeight + 500)) {
+                document.getElementsByClassName("slide-in-left_skills")[0].classList.remove("hidden")
+                document.getElementsByClassName("slide-in-left_skills")[0].classList.add("slide-in-element")
+
+                document.getElementsByClassName("slide-in-right_skills")[0].classList.remove("hidden")
+                document.getElementsByClassName("slide-in-right_skills")[0].classList.add("slide-in-right-element")
+            }
+
+            // Work Exp section
+
+            if (scrollY > (innerHeight + 1100)) {
+                document.getElementsByClassName("work_exp_class")[0].classList.remove("hidden")
+                document.getElementsByClassName("work_exp_class")[0].classList.add("slide-in-element")
+
+                document.getElementsByClassName("work_exp_line")[0].classList.remove("hidden")
+                document.getElementsByClassName("work_exp_line")[0].classList.add("slide-in-right-element")
+
+            }
+
+            if (scrollY > (innerHeight + 1200)) {
+                document.getElementsByClassName("ceridian_section")[0].classList.remove("hidden")
+                document.getElementsByClassName("ceridian_section")[0].classList.add("fade-in-element")
+
+            }
+            if (scrollY > (innerHeight + 1600)) {
+
+                document.getElementsByClassName("roots_section")[0].classList.remove("hidden")
+                document.getElementsByClassName("roots_section")[0].classList.add("fade-in-element")
+            }
+            if (scrollY > (innerHeight + 2050)) {
+                document.getElementsByClassName("waterloop_section")[0].classList.remove("hidden")
+                document.getElementsByClassName("waterloop_section")[0].classList.add("fade-in-element")
+            }
+
+            // Education section
+
+            if (scrollY > (innerHeight + 2870)) {
+                document.getElementsByClassName("education_class")[0].classList.remove("hidden")
+                document.getElementsByClassName("education_class")[0].classList.add("slide-in-element")
+
+                document.getElementsByClassName("education_line")[0].classList.remove("hidden")
+                document.getElementsByClassName("education_line")[0].classList.add("slide-in-right-element")
+
+            }
+
+            if (scrollY > (innerHeight + 3000)) {
+                document.getElementsByClassName("slide-in-left_edu")[0].classList.remove("hidden")
+                document.getElementsByClassName("slide-in-left_edu")[0].classList.add("slide-in-element")
+
+                document.getElementsByClassName("slide-in-right_edu")[0].classList.remove("hidden")
+                document.getElementsByClassName("slide-in-right_edu")[0].classList.add("slide-in-right-element")
+            }
+
+            // Contact section
+
+            if (scrollY > (innerHeight + 3500)) {
+                document.getElementsByClassName("contact_class")[0].classList.remove("hidden")
+                document.getElementsByClassName("contact_class")[0].classList.add("slide-in-element")
+
+                document.getElementsByClassName("contact_line")[0].classList.remove("hidden")
+                document.getElementsByClassName("contact_line")[0].classList.add("slide-in-right-element")
+
+                document.getElementsByClassName("contact_text")[0].classList.remove("hidden")
+                document.getElementsByClassName("contact_text")[0].classList.add("slide-in-right-element")
+            }
+
+            if (scrollY > (innerHeight + 3600)) {
+                document.getElementsByClassName("contact_form_section")[0].classList.remove("hidden")
+                document.getElementsByClassName("contact_form_section")[0].classList.add("fade-in-element")
+            }
+
         });
     </script>
+
+
+
 
     <header id="home">
 
@@ -27,32 +149,66 @@
             <source src="videos/circuits.mp4" type="video/mp4">
         </video>
 
-        <p>
+
+        <p id="intro">
             Hello, I'm
             <span>Arhan Banerjee</span>
+
+
         </p>
-        <h3>
-            Welcome to my website
-        </h3>
+        <p id="button_p">
+            <a href='#about'><button id="headerBtn" onclick= type="button"><div>View my work</div><span class="material-icons">
+                keyboard_arrow_down
+                </span></button></a>
+        </p>
+
+
     </header>
 
     <nav class="nav">
-        <ul>
+        <script>
+            function openNav() {
+
+                document.getElementById("mySidenav").style.width = "250px";
+            }
+
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+            }
+        </script>
+
+        <ul id="myTopnav" class="topnav">
+            <a href="javascript:void(0);" class="icon" onclick="openNav()">
+                <i class="fa fa-bars"></i>
+            </a>
             <li><a href='#home'>HOME</a></li>
             <li><a href='#about'>ABOUT</a></li>
             <li><a href="#skills">SKILLS</a></li>
             <li><a href='#work_exp'>WORK EXPERIENCE</a></li>
             <li><a href='#education'>EDUCATION</a></li>
             <li><a href="#contact">CONTACT</a></li>
+            <li class="topnav_resume"><a class="topnav_resume" href="docs/Updated Resume 2020.pdf" download="Arhan Banerjee Resume 2020" target="_blank">VIEW RESUME</a></li>
+
         </ul>
     </nav>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href='#home' onclick="closeNav()">HOME</a></li>
+        <a href='#about' onclick="closeNav()">ABOUT</a>
+        <a href="#skills" onclick="closeNav()">SKILLS</a>
+        <a href='#work_exp' onclick="closeNav()">WORK EXPERIENCE</a>
+        <a href='#education' onclick="closeNav()">EDUCATION</a>
+        <a href="#contact" onclick="closeNav()">CONTACT</a>
+        <a href="docs/Updated Resume 2020.pdf" download="Arhan Banerjee Resume 2020" class="resume" onclick="closeNav()" target="_blank">View Resume</a>
+    </div>
 
     <section id="about">
 
-        <h1>ABOUT ME</h1>
+        <h1 class="about_class hidden">ABOUT</h1>
+        <hr class="hori_line hidden">
 
         <div class="row">
-            <div class="column">
+            <div class="column hidden slide-in-left">
                 <h2>Arhan Banerjee</h2>
                 <h3>Computer Engineering Student</h3>
                 <p> Hello everyone! I am a second year Computer Engineering student at <a href="https://uwaterloo.ca/">University of 
@@ -65,7 +221,7 @@
             </div>
 
 
-            <div class="column" id="sec">
+            <div class="column hidden slide-in-right" id="sec">
                 <img id="profile_pic" src="images/profile_pic.JPG" alt="Profile picture of Arhan Banerjee" title="Arhan Banerjee">
             </div>
         </div>
@@ -75,10 +231,11 @@
     <section id="skills">
 
 
-        <h1>SKILLS & FRAMEWORKS</h1>
+        <h1 class="skills_class hidden">SKILLS & FRAMEWORKS</h1>
+        <hr class="hori_line skills_line hidden">
 
         <div class="row">
-            <div class="column" id="text">
+            <div class="column hidden slide-in-left_skills" id="text">
                 <p>
                     The main area of my expertise is back end mobile development (iOS and Android).
                     <br><br> C++, Java, and Python are the building blocks on which my projects are based on. I utilize multiple frameworks such as Jenkins and Git to streamline my process and ensure stability.
@@ -87,7 +244,7 @@
                 </p>
             </div>
 
-            <div class="column">
+            <div class="column hidden slide-in-right_skills">
                 <img id="wordcloud" src="images/wordcloud_bg.png" alt="Skills wordcloud">
             </div>
 
@@ -96,9 +253,10 @@
     </section>
 
     <section id="work_exp">
-        <h1>Work Experience</h1>
+        <h1 class="work_exp_class hidden">Work Experience</h1>
+        <hr class="hori_line work_exp_line hidden" id="work_line">
 
-        <section class="exp" id="ceridian">
+        <section class="exp ceridian_section hidden" id="ceridian">
 
 
             <div id="header">
@@ -124,7 +282,7 @@
             </div>
         </section>
 
-        <section class="exp" id="roots">
+        <section class="exp roots_section hidden" id="roots">
             <div id="header">
                 <h3 class="position"><img id="logo" src="images/roots_logo.png" alt="Roots" title="Roots">Software Business Analyst | Roots</h3>
             </div>
@@ -145,7 +303,7 @@
             </div>
         </section>
 
-        <section class="exp" id="waterloop">
+        <section class="exp waterloop_section hidden" id="waterloop">
             <div id="header">
                 <h3 class="position"><img id="logo" src="images/waterloop_logo.png" alt="Waterloop" title="Waterloop">Student Design Team | Waterloop</h3>
             </div>
@@ -171,10 +329,11 @@
     </section>
 
     <section id="education">
-        <h1>Education</h1>
+        <h1 class="education_class hidden">Education</h1>
+        <hr class="hori_line education_line hidden">
 
         <div class="row">
-            <div class="column">
+            <div class="column hidden slide-in-left_edu">
 
                 <h3>University of Waterloo - Waterloo, ON, Canada</h3>
 
@@ -184,7 +343,7 @@
                 <p>Expected Graduation Date: May 2023</p>
             </div>
 
-            <div class="column" id="sec">
+            <div class="column hidden slide-in-right_edu" id="sec">
                 <img id="uni_logo" src="images/uni_logo.png" alt="Engineering at University of Waterloo" title="Engineering at University of Waterloo" height="200">
             </div>
 
@@ -196,17 +355,17 @@
       </svg>
 
     <section id="contact">
-        <h1 id="contact_hook">CONTACT</h1>
+        <h1 class="contact_class hidden">CONTACT</h1>
+        <hr class="hori_line contact_line hidden">
+        <h3 class="contact_text hidden">Want to chat or learn more about me?</h3>
 
-
-
-        <h3>Want to chat or learn more about me?</h3>
-
-        <div id="contact_form">
+        <div id="contact_form" class="contact_form_section hidden">
             <form id="contact-form" action="https://formspree.io/banerjeeruku@yahoo.com" method="POST">
+                <!-- Formspree is used to handle form email requests -->
+
                 <input placeholder="Name" type="text" name="name" required="">
                 <input placeholder="Enter email" type="email" name="_replyto" required="">
-                <textarea rows="5" cols="50" placeholder="Your Message" type="text" name="message"></textarea>
+                <textarea rows="7" cols="90" placeholder="Your Message" type="text" name="message"></textarea>
 
                 <input class="button" type="submit" id="submit" value="SUBMIT">
                 <input type="hidden" name="_subject" value="Form Submission" />
@@ -215,10 +374,82 @@
 
         </div>
 
+        <button onclick="topFunction()" id="myBtn" title="Go to top"><span class="material-icons">
+            double_arrow
+            </span></button>
+        <script>
+            //Get the button:
+            mybutton = document.getElementById("myBtn");
+
+            // Function is called as soon as user starts scrolling
+            window.onscroll = function() {
+                scrollFunction()
+            };
+
+            function scrollFunction() {
+
+
+                if (document.body.scrollTop > 680 || document.documentElement.scrollTop > 680) {
+                    mybutton.style.display = "block";
+
+                    // If fade out is added, remove it and add fade in
+
+                    if (document.getElementById("myBtn").classList.contains('elementToFadeOut')) {
+                        document.getElementById("myBtn").classList.remove('elementToFadeOut');
+                    }
+
+                    if (!document.getElementById("myBtn").classList.contains('elementToFadeIn')) {
+                        document.getElementById("myBtn").classList.add('elementToFadeIn');
+                    }
+                } else {
+
+                    // If no fade in or fade out classes have been added, do nothing
+                    if (!document.getElementById("myBtn").classList.contains('elementToFadeOut') && !document.getElementById("myBtn").classList.contains('elementToFadeIn')) {
+
+                        // If fade in is added, remove it and add fade out
+                    } else if (document.getElementById("myBtn").classList.contains('elementToFadeIn')) {
+                        document.getElementById("myBtn").classList.remove('elementToFadeIn');
+                        document.getElementById("myBtn").classList.add('elementToFadeOut');
+
+                        // If fade out isn't added, add it
+                    } else if (!document.getElementById("myBtn").classList.contains('elementToFadeOut')) {
+                        document.getElementById("myBtn").classList.add('elementToFadeOut');
+                    }
+
+
+                    mybutton.style.display = "block";
+                }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0; // For Safari
+                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            }
+        </script>
+
     </section>
 
     <footer>
-        Arhan Banerjee ©2020
+
+        <div class="row1">
+            <div class="column1">
+                <a href="https://www.linkedin.com/in/arhanbaner/" target="_blank" class="fa fa-linkedin"></a>
+            </div>
+            <div class="column1">
+                <a href="https://github.com/ArhanBaner" target="_blank" class="fa fa-github"></a>
+            </div>
+            <div class="column1">
+                <a href="mailto:banerjeeruku@yahoo.com" class="fa fa-envelope"></a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="column">
+                <p>Arhan Banerjee ©2020</p>
+            </div>
+        </div>
+
     </footer>
 
 

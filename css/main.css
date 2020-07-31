@@ -1,6 +1,9 @@
 html,
 body {
     margin: 0px;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    margin-right: -1px;
 }
 
 
@@ -24,14 +27,14 @@ HOME section
 #home {
     position: relative;
     margin-bottom: 0px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
 #home p {
     background: transparent;
     height: 100%;
     width: 100%;
-    z-index: 20;
+    /*z-index: 20;*/
     position: absolute;
     top: 0;
     left: 0;
@@ -45,11 +48,173 @@ HOME section
     font-size: 42px;
 }
 
+@media screen and (max-width: 900px) {
+    .row {
+        flex-wrap: wrap-reverse !important;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    #intro {
+        font-size: 23px !important;
+    }
+}
+
+@media screen and (min-height: 1000px) {
+    #button_p {
+        padding-top: 200px !important;
+    }
+}
+
+.reduced_mobile_size {
+    font-size: 25px !important;
+}
+
+#intro,
+#button_p,
+.row {
+    animation: Slide_Up 1.4s ease;
+}
+
+@keyframes Slide_Up {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 #home span {
     padding: 10px;
+    padding-left: 10px;
     color: #e31b6d;
 }
 
+#home a {
+    text-decoration: none;
+}
+
+#headerBtn {
+    display: flex;
+    outline: none;
+    border: 2px solid #fff;
+    background-color: transparent;
+    cursor: pointer;
+    padding-bottom: 0px;
+    font-size: 16pt;
+    color: #fff;
+    padding-left: 11px;
+    padding-right: 8px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#headerBtn:hover>span {
+    color: #04c2c9;
+}
+
+#headerBtn:hover {
+    animation: buttonfade 100s linear;
+}
+
+@keyframes buttonfade {
+    0% {
+        background-color: transparent;
+    }
+    0.5% {
+        background-color: #e31b6d;
+    }
+    100% {
+        background-color: #e31b6d;
+    }
+}
+
+#headerBtn div {
+    display: inline;
+    padding-bottom: 0;
+    padding-top: 8px;
+    padding-left: 3px;
+}
+
+#headerBtn span {
+    display: inline;
+    padding: 0;
+}
+
+#button_p {
+    height: 80% !important;
+    padding-top: 150px;
+}
+
+.button_ipad_mobile_view {
+    padding-top: 200px !important;
+}
+
+.hidden {
+    opacity: 0 !important;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: scale(.7, .7)
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in {
+    0% {
+        transform: translateX(-250px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-right {
+    0% {
+        transform: translateX(250px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+.fade-in-element {
+    animation: fade-in 1.4s;
+}
+
+.slide-in-element {
+    animation: slide-in 1s;
+}
+
+.slide-in-right-element {
+    animation: slide-in-right 1s;
+}
+
+
+/*#headerBtn span {
+    transform: rotate(-90deg);
+}
+
+.material-icons {
+    font-size: 40px !important;
+}*/
+
+
+/*
 #home h3 {
     display: flex;
     justify-content: center;
@@ -63,6 +228,7 @@ HOME section
     color: aliceblue;
     margin: 0;
 }
+*/
 
 
 /*
@@ -75,7 +241,7 @@ NAV section (JS in HTML)
 
 nav {
     position: absolute;
-    bottom: -58px;
+    bottom: -62px;
     left: 0px;
     width: 100%;
     height: 60px;
@@ -89,8 +255,145 @@ nav {
 }
 
 nav ul {
-    padding-left: 5%;
+    padding-left: 2%;
+    width: 100%;
 }
+
+nav .icon {
+    display: none;
+}
+
+.topnav_resume {
+    float: right !important;
+    padding-right: 10px;
+}
+
+@media screen and (max-width: 835px) {
+    .nav a {
+        display: none;
+    }
+    .nav a.icon {
+        float: left;
+        display: block;
+        font-size: 30px;
+        color: #e31b6d;
+    }
+}
+
+
+/*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
+
+
+/* The side navigation menu */
+
+.sidenav {
+    height: 100%;
+    /* 100% Full-height */
+    width: 0;
+    /* 0 width - change this with JavaScript */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Stay on top */
+    top: 0;
+    /* Stay at the top */
+    left: 0;
+    background-color: #151b24;
+    /* Black*/
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    padding-top: 60px;
+    /* Place content 60px from the top */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in the sidenav */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+
+/* The navigation menu links */
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+
+/* When you mouse over the navigation links, change their color */
+
+.sidenav a:hover {
+    color: #e31b6d;
+}
+
+
+/* Position and style the close button (top right corner) */
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.sidenav .resume {
+    position: absolute;
+    font-size: 25px;
+    bottom: 0;
+    left: 0;
+    padding-bottom: 3em;
+    white-space: nowrap;
+    width: 100%;
+}
+
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+
+/*
+
+
+
+
+
+*/
 
 nav li {
     float: left;
@@ -111,7 +414,24 @@ nav li a {
 }
 
 nav li a:hover {
-    color: #e31b6d;
+    animation: navbuttonfade 100s linear;
+}
+
+@keyframes navbuttonfade {
+    0% {
+        color: white;
+    }
+    0.3% {
+        color: #e31b6d;
+    }
+    100% {
+        color: #e31b6d;
+    }
+}
+
+.fa-bars {
+    color: aliceblue;
+    background-color: transparent !important;
 }
 
 
@@ -124,8 +444,8 @@ ABOUT section
 */
 
 #about {
-    padding-top: 60px;
-    padding-bottom: 50px;
+    padding-top: 120px;
+    padding-bottom: 100px;
     width: 100%;
     height: 100%;
     font-size: 20px;
@@ -134,13 +454,30 @@ ABOUT section
 
 #about h1 {
     margin: 60px;
+    margin-bottom: 10px;
     text-align: center;
     color: #e31b6d;
+    font-size: 30pt;
+}
+
+.hori_line {
+    width: 7%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 40px;
+    background-color: #e31b6d;
+    height: 4px;
+    border: none;
+    outline: none;
 }
 
 .row {
     display: flex;
     flex: auto auto;
+}
+
+.stacked_view {
+    flex-wrap: wrap-reverse !important;
 }
 
 .column {
@@ -196,7 +533,7 @@ SKILLS section
 
 #skills {
     padding-top: 30px;
-    padding-bottom: 50px;
+    padding-bottom: 80px;
     width: 100%;
     height: 100%;
     font-size: 20px;
@@ -204,9 +541,10 @@ SKILLS section
 }
 
 #skills h1 {
-    margin-top: 50px;
+    margin-top: 60px;
     text-align: center;
     color: #e31b6d;
+    font-size: 30pt;
 }
 
 #skills .row {
@@ -240,7 +578,7 @@ Work Experience Section
 
 #work_exp {
     padding-top: 30px;
-    padding-bottom: 50px;
+    padding-bottom: 80px;
     width: 100%;
     height: 100%;
     font-size: 20px;
@@ -248,12 +586,26 @@ Work Experience Section
 }
 
 #work_exp h1 {
-    margin-top: 50px;
+    margin-top: 60px;
     text-align: center;
     color: #e31b6d;
+    font-size: 30pt;
+}
+
+#work_exp #work_line {
+    width: 7%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 40px;
+    background-color: #e31b6d;
+    height: 4px;
+    border: none;
+    outline: none;
 }
 
 #work_exp li {
+    padding-left: 5px;
+    padding-right: 5px;
     margin-bottom: 20px;
 }
 
@@ -292,7 +644,7 @@ h3.position {
     margin-bottom: 0;
 }
 
-hr {
+#work_exp hr {
     margin-left: 2%;
     margin-right: 2%;
 }
@@ -332,6 +684,7 @@ Education Section
 #education h1 {
     text-align: center;
     color: #e31b6d;
+    font-size: 30pt;
 }
 
 .triangle-down {
@@ -349,7 +702,7 @@ svg {
 
 /*
 
-
+Contact section
 
 */
 
@@ -367,17 +720,21 @@ svg {
 #contact h1 {
     text-align: center;
     color: #e31b6d;
+    font-size: 40px;
 }
 
 #contact h3 {
     text-align: center;
     color: #04c2c9;
+    font-size: 15px;
 }
 
 #contact_form {
+    margin-top: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 50px;
 }
 
 form {
@@ -404,12 +761,149 @@ textarea {
     resize: none;
 }
 
+#submit {
+    width: 100px;
+    text-align: center;
+    border: 2px solid #04c2c9;
+    margin-top: 6px;
+    cursor: pointer;
+}
+
 
 /*
 
+Footer section
 
 */
 
 footer {
     background-color: #1b242f;
+    padding: 30px;
+    padding-top: 70px;
+}
+
+.fa {
+    padding: 10px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.fa:hover {
+    animation: footerbuttonfade 100s linear;
+}
+
+@keyframes footerbuttonfade {
+    0% {
+        background-color: #262f38;
+    }
+    0.5% {
+        background-color: #e31b6d;
+    }
+    100% {
+        background-color: #e31b6d;
+    }
+}
+
+.fa-github,
+.fa-linkedin,
+.fa-envelope {
+    background: #262f38;
+    color: white;
+}
+
+.fa-github:before,
+.fa-linkedin:before,
+.fa-envelope:before {
+    font-size: 30px;
+}
+
+.row1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.column1 {
+    text-align: center;
+    color: rgb(190, 213, 233);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    overflow: hidden;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+footer p {
+    color: #8f9aa7;
+    opacity: 0.6;
+}
+
+
+/*
+
+Go To Top button 
+
+*/
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #e31b6d;
+    cursor: pointer;
+    padding-top: 5px;
+    transition: ease-in;
+    opacity: 0;
+}
+
+#myBtn:hover {
+    opacity: 0.7;
+}
+
+#myBtn span {
+    transform: rotate(-90deg);
+}
+
+.material-icons {
+    font-size: 40px !important;
+}
+
+.elementToFadeIn {
+    opacity: 1 !important;
+    animation: fade 2s linear;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.elementToFadeOut {
+    opacity: 0 !important;
+    animation: fadeout 1s linear;
+    cursor: default !important;
+}
+
+@keyframes fadeout {
+    0% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
 }
