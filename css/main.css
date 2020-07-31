@@ -109,10 +109,12 @@ HOME section
     padding-bottom: 0px;
     font-size: 16pt;
     color: #fff;
-    padding-left: 11px;
+    /* padding-left: 11px;
     padding-right: 8px;
     padding-top: 5px;
-    padding-bottom: 5px;
+    padding-bottom: 5px;*/
+    justify-content: center;
+    align-items: center;
 }
 
 #headerBtn:hover>span {
@@ -136,20 +138,23 @@ HOME section
 }
 
 #headerBtn div {
-    display: inline;
-    padding-bottom: 0;
-    padding-top: 8px;
-    padding-left: 3px;
+    padding-left: 0.4em;
 }
 
 #headerBtn span {
     display: inline;
-    padding: 0;
+    padding: 0.1em;
+}
+
+#button_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #button_p {
-    height: 80% !important;
-    padding-top: 150px;
+    position: absolute;
+    bottom: 0;
 }
 
 .button_ipad_mobile_view {
@@ -863,6 +868,7 @@ Go To Top button
 
 #myBtn:hover {
     opacity: 0.7;
+    background-color: #555;
 }
 
 #myBtn span {
