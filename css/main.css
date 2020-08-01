@@ -62,7 +62,7 @@ HOME section
     #button_p {
         display: none;
     }
-    nav {
+    .nav {
         bottom: -107px !important;
     }
 }
