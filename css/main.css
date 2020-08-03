@@ -65,6 +65,9 @@ HOME section
     .nav {
         bottom: -107px !important;
     }
+    #about {
+        background: linear-gradient(#040b1f 80px, #0d1019 100px);
+    }
 }
 
 @media screen and (max-width: 550px) {
