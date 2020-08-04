@@ -1,4 +1,11 @@
+/*
+
+Return to top button animations
+
+*/
+
 window.onscroll = function() {
+    //Start function on scroll
     scrollFunction()
 };
 

@@ -4,12 +4,19 @@
 <head>
 
     <meta charset="utf-8">
+
+    <!-- Viewport is used to ensure appropriate scaling on desktop and mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Importing icon and styles -->
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Importing JS -->
     <script type="text/javascript" src="scripts/animations.js"></script>
     <script type="text/javascript" src="scripts/home_button.js"></script>
+
     <title>Arhan Banerjee</title>
 
 
@@ -20,42 +27,43 @@
 
     <header id="home">
 
-
+        <!-- Background home video doesn't autoplay on iOS, backup is an image -->
         <video autoplay muted loop poster="images/backup_img.JPG" id="background_vid">
             <source src="videos/circuits.mp4" type="video/mp4">
         </video>
 
-
         <p id="intro">
             Hello, I'm
             <span>Arhan Banerjee</span>
-
-
         </p>
+
         <div id="button_container">
             <div id="button_p">
-                <a href='#about'><button id="headerBtn" onclick= type="button"><div>View my work</div><span class="material-icons">
-                keyboard_arrow_down
-                </span></button></a>
+                <a href='#about'>
+                    <button id="headerBtn" type="button">
+                        <div>View my work</div>
+                            <span class="material-icons">keyboard_arrow_down
+                        </span>
+                    </button>
+                </a>
             </div>
         </div>
-
 
     </header>
 
     <nav class="nav">
-        <script>
-            function openNav() {
+        <!-- 
+            There are two nav views, depending on screen width. 
+            Normally, all nav links are shown at top. Upon shrinking width,
+            all links get removed and replaced with a menu icon.
 
-                document.getElementById("mySidenav").style.width = "250px";
-            }
-
-            function closeNav() {
-                document.getElementById("mySidenav").style.width = "0";
-            }
-        </script>
+            This menu icon calls the sidenav div class, where the new links 
+            are displayed vertically for easier access. 
+        -->
 
         <ul id="myTopnav" class="topnav">
+
+            <!-- Menu icon -->
             <a href="javascript:void(0);" class="icon" onclick="openNav()">
                 <i class="fa fa-bars"></i>
             </a>
@@ -70,6 +78,9 @@
         </ul>
     </nav>
     <div id="mySidenav" class="sidenav">
+
+        <!-- This nav is used when screen width is below a specified amount -->
+
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a href='#home' onclick="closeNav()">HOME</a></li>
         <a href='#about' onclick="closeNav()">ABOUT</a>
@@ -228,6 +239,8 @@
         </div>
 
     </section>
+
+    <!-- Used to create the inverted triangle transition between sections -->
     <svg preserveAspectRatio="none" viewBox="0 0 100 102" height="75" width="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" class="svgcolor-light">
         <path d="M0 0 L50 100 L100 0 Z" fill=#10131d stroke=#10131d></path>
       </svg>
@@ -252,6 +265,7 @@
 
         </div>
 
+        <!-- Sticky return to home button -->
         <button onclick="topFunction()" id="myBtn" title="Go to top"><span class="material-icons">
             double_arrow
             </span></button>

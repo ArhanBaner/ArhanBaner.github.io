@@ -1,4 +1,30 @@
+/*
+
+Side nav 
+
+*/
+
+function openNav() {
+
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+
+
+/*
+
+Slide in elements animation + sticky nav
+
+
+*/
+
 window.addEventListener("scroll", function() {
+
+    // If window is > 1950 px, unhide everything and have no animations
     if (window.innerHeight > 1950) {
 
         document.querySelectorAll('.hidden').forEach(x => x.classList.remove('hidden'));
@@ -8,6 +34,7 @@ window.addEventListener("scroll", function() {
             document.getElementsByClassName("nav")[0].classList.remove("fixed");
         }
 
+        // Else If window is in between , do animations with updated points
     } else if (window.innerHeight > 1440 && window.innerHeight <= 1950) {
         if (scrollY > window.innerHeight) {
             document.getElementsByClassName("nav")[0].classList.add("fixed");
@@ -116,7 +143,7 @@ window.addEventListener("scroll", function() {
         }
 
 
-
+        // If window is small, do animation with updated points
     } else {
         if (scrollY > (innerHeight - 10)) {
             document.getElementsByClassName("nav")[0].classList.add("fixed");
